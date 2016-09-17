@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<title>coffee day</title>
+	<link rel="stylesheet" type="text/css" href="f.css" media="all" />
+</head>
+<body>
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="home.html"> <h2>home </h2></a>
+	<a href="menu.html"> <h2>menu </h2></a>
+	<a href="contact.html"> <h2>contact </h2></a>
+  </div>
+</div>
+
+<script>
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+<body style="color:blue;background-image:url(c.jpg);background-repeat: no-repeat;background-size: 1300px 700px;">
+ <div class="menu content">
+ <div id="demo" class="menu">
+ <h1 style="color:#b78ca1">cafe menu </h1>
+<h2 style="color:blue"> food</h2>
+
+<ul>
+	<li>fresly made special</li>
+	<li>burger</li>
+	<li>pizza</li>
+	<li>sandwithes</li>
+</ul>
+<h2 align="left">Bevarages</h2>
+	<ul>
+	<li> soup</li>
+	<li>cold coffee</li>
+	<li>hot coffee</li>
+	<li>cold tea</li>
+	<li>hot tea</li>
+</ul>
+</div>
+</div>
+</body>
+
+
+</body>
+</html>

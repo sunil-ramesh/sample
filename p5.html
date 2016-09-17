@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<img onmouseover="bigimg(this)" onmouseout="normalImg(this)" border="0" src="smily1.jpg" alt="smily" width="500px" heigth="500px">
+<script type="text/javascript">
+	function bigimg(x){
+		x.src='smily1.jpg'
+	}
+	function normalImg(x){
+		x.src='smily.jpg'
+	}
+</script>
+<p>this is a paragraph</p>
+<label>enter your name</label>
+<input type="text" name="text" onkeyup="new2function()" id="d">
+<script type="text/javascript">
+	function new2function(){
+		var x=document.getElementById('d');
+		x.value=x.value.replace();
+
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div id="demo2">
+<form style="padding:20px">
+	name:<input type="text" name="name" id="demo3"><br>
+	Designation:<input type="text" name="Designation" id="demo4"><br>
+	Car:<select id="myselect" onchange="myfunction()">
+		<option value="Audi">Audi</option>
+		<option value="BMW">BMW</option>
+		<option value="VOLVO">VOLVO</option>
+		<option value="MERCEDES">MERCEDES</option>
+	</select>
+</form>
+	<button onclick="newfunction()"> submit</button>
+</div>
+<p id="demo1"></p>
+<p id="demo5" style="padding:50px"></p>
+<script type="text/javascript">
+	function myfunction()
+	{
+		var x=document.getElementById("myselect").value;
+		document.getElementById("demo1").innerHTML="you selected:"+ x;
+	}
+
+	function newfunction()
+	{
+var a=document.getElementById("demo3").value;
+var b=document.getElementById("demo4").value;
+ var c=document.getElementById("myselect").value;
+document.getElementById("demo5").innerHTML=a+"<br>"+b+"<br>"+c;
+	}
+</script>
+
+</body>
+</html>

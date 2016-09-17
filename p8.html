@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.col{
+			color:red;
+			width: 100px;
+			height: 100px
+			border:solid black;
+		}
+	</style>
+</head>
+<body>
+<ul class="first">
+	<li class="d">list1 1</li>
+	<li class="b">list1 2</li>
+	<li class="c">list1 3</li>
+	<li class="e">list1 4</li>
+</ul>
+<ul class="second">
+	<li class="remove">list1 5</li>
+	<li class="remove">list1 6</li>
+	<li>list1 7</li>
+	<li>list1 8</li>
+</ul>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript">
+	$('ul li:first').css('background-color','red').end().find('.c').css('background-color','blue');
+	$('ul.second').find('.remove').replaceWith('<li>removed</li>');
+</script>
+<select class="dem">
+	<option value="red">red</option>
+	<option value="blue">blue</option>
+	<option value="green">green</option>
+	<option value="white">white</option>
+</select>
+<button class="show"> show the color</button>
+<script type="text/javascript">
+	$('.show').click(function()
+	{
+		alert($('.dem').val());
+		alert($('.dem').text());
+		alert($('.dem:selected').text());
+	});
+</script>
+<p class="col" id="mouse"> this is a paragraph</p>
+<style>
+		.col{
+			color:blue;
+			width: 100px;
+			height: 100px
+			border:solid black;
+		}
+	</style>
+<script type="text/javascript">
+	$(document).ready(function()
+	{
+		$('#mouse').click(function(){
+		$('#mouse')	.css('background-color','red')
+	});
+	$('#mouse').hover(function()
+		{
+		$('#mouse').css('background-color','green')
+	});
+});
+
+</script>
+
+<div class="one"></div>
+<div class="two"></div>
+<div class="three"></div>
+<div class="four"></div>
+<div class="five"></div>
+
+<script type="text/javascript">
+var arr=["one","two","three","four","five"];
+var obj={ one:1,two:2,three:3,four:4,five:5};
+jQuery.each(arr,function(i,val){
+	$("#" +val).text("mine is" + val + ".");
+	return(val !=="three");
+});
+jQuery.each(obj,function(i,val){
+	$("#" +i).append(document.createTextNode("-"+val));
+});
+
+</body>
+</html>

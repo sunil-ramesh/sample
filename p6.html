@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div id="nam">
+<span>name</span><span id="name"></span>
+<span>age</span><span id="age"></span>
+<span>city</span><span id="city"></span>
+</div>
+<button onclick="showMessage(2)"> show message</button>
+<script>
+	function showMessage(count){
+		if (count==1) {
+			console.log('in');
+		}
+		else{
+			console.log('out');
+		}
+		for(i=0;i<10;i++){
+			console.log(i);
+		}
+	}
+</script>
+<button onclick="profile()"> click to view my profile</button>
+<script type="text/javascript">
+var data={
+	"name":"sunil","age":22,"address":{
+	"street":"5th main vijayanagar,2nd stage","city":"mysore"
+	}
+}
+document.getElementById('nam').style.display=none;
+
+function profile(){
+	document.getElementById('name').innerHTMl=data.name;
+	document.getElementById('age').innerHTMl=data.age;
+	//document.getElementById('street').innerHTMl=data.address.street;
+	document.getElementById('city').innerHTMl=data.address.city;
+	document.getElementById('nam').style.display=block;
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript">
+	jQuery('p').html('<strong> hello world</strong>');
+		alert($('p').html());
+</script>
+
+</body>
+</html>
